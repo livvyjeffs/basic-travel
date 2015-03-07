@@ -37,7 +37,7 @@ if (Meteor.isClient) {
       var email = event.target.itinEmail.value;
       var description = event.target.itinDescription.value;
       Meteor.call('createNewItinerary',when,length,budget,name,email,description);
-    
+
       Router.go('confirmation'); 
     }
   });
@@ -47,7 +47,12 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
 
   Meteor.publish('theItinerary',function(){
-    return ItineraryList.find();
+    var currentUserId = this.userId;
+    if(currentUserId === 's7NXe9uYCFEngX5ke'){
+      //un: jeffers.olivia@gmail.com
+      //pw: ojeffers7
+      return ItineraryList.find();
+    }
   });
 
   Meteor.methods({
