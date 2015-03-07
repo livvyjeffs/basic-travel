@@ -3,17 +3,13 @@
 </head>
 
 <body>
-	<h1>Welcome to Meteor!</h1>
-
-	{{> formFirst}}
-
-	{{> itineraries}}
 
 </body>
 
-<template name="hello">
-	<button>Click Me</button>
-	<p>You've pressed the button {{counter}} times.</p>
+<template name="home">
+	<h1>Welcome Page</h1>
+	{{> formFirst}}
+	{{> itineraries}}
 </template>
 
 <template name="formFirst">
@@ -23,6 +19,21 @@
 		<input type="text" id="itinBudget" name="itinBudget">
 		<input type="submit" value="Take Me to Thailand">
 	</form>
+</template>
+
+<template name="additionalInfo">
+	<h1>Secondary Page</h1>
+	<form>
+		<input type="text" id="itinName" name="itinName">
+		<input type="email" id="itinEmail" name="itinEmail">
+		<textarea id="itinDescription" name="itinDescription"></textarea>
+		<input type="submit" value="Submit my Itinerary">
+	</form>
+	{{> itineraries}}
+</template>
+
+<template name="confirmation">
+	<h1>Your itinerary has been submitted!</h1>
 </template>
 
 <template name="itineraries">
