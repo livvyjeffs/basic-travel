@@ -12,7 +12,6 @@
 	<h1>Welcome Page</h1>
 	{{> header}}
 	{{> formFirst}}
-	{{> itineraries}}
 </template>
 
 <template name="additionalInfo">
@@ -24,12 +23,17 @@
 		<textarea id="itinDescription" name="itinDescription"></textarea>
 		<input type="submit" value="Submit my Itinerary">
 	</form>
-	{{> itineraries}}
 </template>
 
 <template name="confirmation">
 	<h1>Your itinerary has been submitted!</h1>
 	{{> header}}
+</template>
+
+<template name="admin">
+	<h1>Admin Page</h1>
+	{{> header}}
+	{{> itineraries}}
 </template>
 
 <!-- Template for Forms -->

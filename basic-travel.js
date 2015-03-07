@@ -4,6 +4,7 @@ Router.map(function(){
   this.route('home', {path: '/'});
   this.route('additionalInfo');
   this.route('confirmation');
+  this.route('admin');
 });
 
 if (Meteor.isClient) {
@@ -40,9 +41,13 @@ if (Meteor.isClient) {
       itinerary.email = event.target.itinEmail.value;
       itinerary.description = event.target.itinDescription.value;
 
-      Meteor.call('createNewItinerary',itinerary);
+      Meteor.call('createNewItinerary',itinerary, function(err, data){
+       if(err){
+         console.log(err);
+       }
+       Router.go('confirmation');
+     });
 
-      Router.go('confirmation'); 
     }
   });
 
