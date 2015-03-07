@@ -1,0 +1,36 @@
+<head>
+	<title>basic-travel</title>
+</head>
+
+<body>
+	<h1>Welcome to Meteor!</h1>
+
+	{{> formFirst}}
+
+	{{> itineraries}}
+
+</body>
+
+<template name="hello">
+	<button>Click Me</button>
+	<p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="formFirst">
+	<form>
+		<input type="text" id="itinWhen" name="itinWhen">
+		<input type="text" id="itinLength" name="itinLength">
+		<input type="text" id="itinBudget" name="itinBudget">
+		<input type="submit" value="Take Me to Thailand">
+	</form>
+</template>
+
+<template name="itineraries">
+	<ul>
+		{{#each itinerary}}
+		<li class="itinerary">
+			{{when}}, {{length}}, {{budget}}
+		</li>
+		{{/each}}
+	</ul>
+</template>
