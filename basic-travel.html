@@ -6,23 +6,18 @@
 
 </body>
 
+<!-- Router Pages -->
+
 <template name="home">
 	<h1>Welcome Page</h1>
+	{{> header}}
 	{{> formFirst}}
 	{{> itineraries}}
 </template>
 
-<template name="formFirst">
-	<form>
-		<input type="text" id="itinWhen" name="itinWhen">
-		<input type="text" id="itinLength" name="itinLength">
-		<input type="text" id="itinBudget" name="itinBudget">
-		<input type="submit" value="Take Me to Thailand">
-	</form>
-</template>
-
 <template name="additionalInfo">
 	<h1>Secondary Page</h1>
+	{{> header}}
 	<form>
 		<input type="text" id="itinName" name="itinName">
 		<input type="email" id="itinEmail" name="itinEmail">
@@ -34,6 +29,18 @@
 
 <template name="confirmation">
 	<h1>Your itinerary has been submitted!</h1>
+	{{> header}}
+</template>
+
+<!-- Template for Forms -->
+
+<template name="formFirst">
+	<form>
+		<input type="text" id="itinWhen" name="itinWhen">
+		<input type="text" id="itinLength" name="itinLength">
+		<input type="text" id="itinBudget" name="itinBudget">
+		<input type="submit" value="Take Me to Thailand">
+	</form>
 </template>
 
 <template name="itineraries">
@@ -44,4 +51,10 @@
 		</li>
 		{{/each}}
 	</ul>
+</template>
+
+<!-- HTML CSS Templates -->
+
+<template name="header">
+	{{> loginButtons}}
 </template>
