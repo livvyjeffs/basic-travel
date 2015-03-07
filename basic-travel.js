@@ -7,9 +7,8 @@ Router.map(function(){
 });
 
 if (Meteor.isClient) {
-  // counter starts at 0
 
-  Session.setDefault('counter', 0);
+  Meteor.subscribe('theItineraries');
 
   Template.itineraries.helpers({
     'itinerary': function(){
@@ -53,7 +52,26 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
+  Meteor.publish('theItineraries',function(){
+    return PlayersList.find(); //remove this before deploy
+  });
+  Meteor.methods({
+    'insertItineraryFirst': function(){
+      PlayersList.insert({
+        when: playerNameVar,
+        length: 0,
+        budget: Session.get('currentUserId')
+      });
+      Session.set('itinID',this._id);
+      console.log(Session.get('itinID'));
+    },
+    'insertItinerarySecond': function(itinID){
+      var currentUserId = Meteor.userId();
+      PlayersList.insert({
+        name: playerNameVar,
+        email: 0,
+        description: currentUserId
+      });
+    }
   });
 }
