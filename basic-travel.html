@@ -37,7 +37,7 @@
 <template name="formFirst">
 	<form>
 		<input type="text" id="itinWhen" name="itinWhen">
-		<input type="text" id="itinLength" name="itinLength">
+		<input type="text" id="itinDuration" name="itinDuration">
 		<input type="text" id="itinBudget" name="itinBudget">
 		<input type="submit" value="Take Me to Thailand">
 	</form>
@@ -47,7 +47,7 @@
 	<ul>
 		{{#each itinerary}}
 		<li class="itinerary">
-			{{when}}, {{length}}, {{budget}}, {{name}}, {{email}}, {{description}}
+			{{when}}, {{duration}}, {{budget}}, {{name}}, {{email}}, {{description}}
 		</li>
 		{{/each}}
 	</ul>

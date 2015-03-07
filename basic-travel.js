@@ -22,7 +22,7 @@ if (Meteor.isClient) {
       event.preventDefault();
       Router.go('additionalInfo');
       Session.set('itinWhen',event.target.itinWhen.value);
-      Session.set('itinLength',event.target.itinLength.value);
+      Session.set('itinDuration',event.target.itinDuration.value);
       Session.set('itinBudget',event.target.itinBudget.value);
     }
   });
@@ -30,13 +30,17 @@ if (Meteor.isClient) {
   Template.additionalInfo.events({
     'submit form': function(event){
       event.preventDefault();
-      var when = Session.get('itinWhen');
-      var length = Session.get('itinLength');
-      var budget = Session.get('itinBudget');
-      var name = event.target.itinName.value;
-      var email = event.target.itinEmail.value;
-      var description = event.target.itinDescription.value;
-      Meteor.call('createNewItinerary',when,length,budget,name,email,description);
+      
+      var itinerary = new Object();
+
+      itinerary.when = Session.get('itinWhen');
+      itinerary.duration = Session.get('itinDuration');
+      itinerary.budget = Session.get('itinBudget');
+      itinerary.name = event.target.itinName.value;
+      itinerary.email = event.target.itinEmail.value;
+      itinerary.description = event.target.itinDescription.value;
+
+      Meteor.call('createNewItinerary',itinerary);
 
       Router.go('confirmation'); 
     }
@@ -56,16 +60,16 @@ if (Meteor.isServer) {
   });
 
   Meteor.methods({
-    'createNewItinerary': function(when,length,budget,name,email,description){
+    'createNewItinerary': function(itinerary){
       var userId = Meteor.userId();
       ItineraryList.insert({
-        when: when,
-        length: length,
-        budget: budget,
-        name: name,
-        email: email,
-        description: description,
-        createdBy: userId
+        when: itinerary.when,
+        duration: itinerary.duration,
+        budget: itinerary.budget,
+        name: itinerary.name,
+        email: itinerary.email,
+        description: itinerary.description,
+        createdBy: itinerary.userId
       });
 
     }
