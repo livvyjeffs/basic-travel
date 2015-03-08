@@ -7,17 +7,17 @@ Template.itineraries.helpers({
   }
 });
 
-Template.formFirst.events({
+Template.mainForm.events({
   'submit form': function(event){
     event.preventDefault();
-    Router.go('additionalInfo');
+    Router.go('secondaryForm');
     Session.set('itinWhen',event.target.itinWhen.value);
     Session.set('itinDuration',event.target.itinDuration.value);
     Session.set('itinBudget',event.target.itinBudget.value);
   }
 });
 
-Template.additionalInfo.events({
+Template.secondaryForm.events({
   'submit form': function(event){
     event.preventDefault();
 

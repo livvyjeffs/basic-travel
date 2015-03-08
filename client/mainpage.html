@@ -1,0 +1,17 @@
+<template name="mainLayout">
+	<div id="background">
+		{{> yield region="navbar"}}
+		<div class="{{currentRouteName}}-page">
+			{{> yield}}
+		</div>
+		{{> yield region="footer"}}
+	</div>
+</template>
+
+<template name="navbar">
+	header
+</template>
+
+<template name ="footer">
+	footer
+</template>
