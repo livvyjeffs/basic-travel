@@ -49,13 +49,31 @@
 </template>
 
 <template name="itineraries">
-	<ul>
-		{{#each itinerary}}
-		<li class="itinerary">
-			{{when}}, {{duration}}, {{budget}}, {{name}}, {{email}}, {{description}}
-		</li>
-		{{/each}}
-	</ul>
+	<table>
+		<thead>
+			<tr>
+				<th>When</th> 
+				<th>Duration</th>
+				<th>Budget</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each itinerary}}	
+			<tr>
+				<td>{{when}}</td> 
+				<td>{{duration}}</td>
+				<td>{{budget}}</td>
+				<td>{{name}}</td>
+				<td>{{email}}</td>
+				<td>{{description}}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+		
+	</table>
 </template>
 
 <!-- HTML CSS Templates -->
