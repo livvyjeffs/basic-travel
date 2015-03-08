@@ -1,0 +1,100 @@
+
+
+#background{
+	position: absolute;
+	left: 0; right: 0; top: 0; bottom: 0;
+	background-image: url('../images/background.jpg');
+	background-position: center;
+	background-size: 100%;
+	text-align: center;
+	#central-container{
+		width: 960px;
+		display: inline-block;
+		margin-top: 8%;
+		#text-block{
+			text-align: center;
+			color: white;
+			text-shadow: 2px 2px 1px black;
+			margin: 20px 0;
+			h1{
+				font-size: 40px;
+			}
+			h2{
+				font-size: 30px;
+			}
+		}
+		#form-container{
+			text-align: left;
+			border-radius: 5px;
+			background-color: #fafafa;
+			padding: 10px;
+			display: block;
+		}
+		#input-block{
+			margin-top: 40px;
+			background-color: black;
+			width: 100%;
+			text-align: center;
+			padding: 20px 0;
+			input,.btn{
+				padding: 7px 5px;
+				border-radius: 3px;
+				box-shadow: none;
+				margin: 7px;
+			}
+			input{
+				width: 23%;
+			}
+			.btn{
+				width: 15%;
+				background-color: green;
+				color: white;
+				text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+			}
+
+		}
+
+	}
+	#bottom-background{
+		position: absolute;
+		left: 0; bottom: 0; right: 0;
+		background-color: rgba(0,0,0,0.75);
+		text-align: center;
+		#bottom-container{
+			width: 1000px;
+			display: inline-block;
+			.container{
+				margin: 10px 0;
+				display: inline-block;
+				width: 33%;
+				padding: 0 15px;
+				border-right: 1px solid white;
+				color: white;
+				text-shadow: 1px 1px 1px black;
+				&:last-child{
+					border-right: none;
+				}
+				h1{
+					margin: 10px 0;
+					font-size: 20px;
+				}
+				p{
+					color: rgba(255,255,255,0.85);
+					font-size: 14px;
+					text-align: left;
+				}
+				button{
+					font-size: 14px;
+					padding: 7px 5px;
+					border-radius: 3px;
+					box-shadow: none;
+					background-color: rgba(255,255,255,0.85);
+					color: black;
+					text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+				}
+			}
+
+		}
+	}
+	
+}

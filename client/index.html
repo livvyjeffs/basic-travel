@@ -19,13 +19,15 @@
 <!-- HTML CSS Templates -->
 
 <template name="mainLayout">
-	<!-- optional navbar yield -->
-	{{> yield region="navbar"}}
-	<div class="{{currentRouteName}}-page">
-		{{> yield}}
+	<div id="background">
+		<!-- optional navbar yield -->
+		{{> yield region="navbar"}}
+		<div class="{{currentRouteName}}-page">
+			{{> yield}}
+		</div>
+		<!-- optional footer yield -->
+		{{> yield region="footer"}}
 	</div>
-	<!-- optional footer yield -->
-	{{> yield region="footer"}}
 </template>
 
 <template name="background">
