@@ -1,0 +1,34 @@
+<template name="admin">
+	<h1>Admin Page</h1>
+	{{> header}}
+	{{> loginButtons}}
+	{{> itineraries}}
+</template>
+
+<template name="itineraries">
+	<table>
+		<thead>
+			<tr>
+				<th>When</th> 
+				<th>Duration</th>
+				<th>Budget</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each itinerary}}	
+			<tr>
+				<td>{{when}}</td> 
+				<td>{{duration}}</td>
+				<td>{{budget}}</td>
+				<td>{{name}}</td>
+				<td>{{email}}</td>
+				<td>{{description}}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+		
+	</table>
+</template>

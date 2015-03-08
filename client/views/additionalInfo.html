@@ -1,0 +1,20 @@
+<template name="formFirst">
+	<form>
+		<input type="text" id="itinWhen" name="itinWhen">
+		<input type="text" id="itinDuration" name="itinDuration">
+		<input type="text" id="itinBudget" name="itinBudget">
+		<input type="submit" value="Take Me to Thailand">
+	</form>
+</template>
+
+<template name="additionalInfo">
+	<h1>Secondary Page</h1>
+	{{> header}}
+	<form>
+		<input type="text" id="itinName" name="itinName">
+		<input type="email" id="itinEmail" name="itinEmail">
+		<textarea id="itinDescription" name="itinDescription"></textarea>
+		<input type="submit" value="Submit my Itinerary">
+	</form>
+</template>
+
