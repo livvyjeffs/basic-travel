@@ -31,7 +31,7 @@ $padding-md: 20px;
 
 #background{
 	background-image: url('../background.jpg');
-	background-position: center;
+	background-position: top;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-color: black;
@@ -83,7 +83,7 @@ $padding-md: 20px;
 	text-align: center;
 	color: white;
 	text-shadow: 2px 2px 1px black;
-	margin-top: 120px;
+	margin-top: 80px;
 	h1{
 		font-size: 40px;
 	}
