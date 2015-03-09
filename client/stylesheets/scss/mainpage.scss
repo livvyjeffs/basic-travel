@@ -1,3 +1,5 @@
+$padding-md: 20px;
+
 .sticky{
 	position: absolute;
 }
@@ -15,82 +17,17 @@
 }
 
 .padding-md{
-	padding: 10px;
+	padding: $padding-md;
 }
 
-@media (max-width: 992px) {
-
-	#bottom-background{
-		display: inline-block;
-		position: relative;
-	}
-
+.float-right{
+	display: inline-block;
+	float: right;
 }
 
-#form-container{
-	background-color: black;
-	padding: 15px;
-	border-color: 3px;
-	margin-top: 40px;
-	input{
-		padding: 7px 5px;
-		border-radius: 3px;
-		box-shadow: none;
-		width: 100%;
-	}
-	[type="submit"]{
-		background-color: green;
-		color: white;
-		text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-	}
+.width-auto{
+	width: auto !important;
 }
-
-#top-background{
-	margin-top: 120px;
-	text-align: center;
-	color: white;
-	text-shadow: 2px 2px 1px black;
-	h1{
-		font-size: 40px;
-	}
-	h2{
-		font-size: 30px;
-	}
-}
-
-#bottom-background{
-	background-color: rgba(0,0,0,0.75);
-	text-align: center;
-	.option{
-		border-right: 1px solid white;
-		color: white;
-		text-shadow: 1px 1px 1px black;
-		padding: 20px;
-		&:last-child{
-			border-right: none;
-
-		}
-		h1{
-			margin: 10px 0;
-			font-size: 20px;
-		}
-		p{
-			color: rgba(255,255,255,0.85);
-			font-size: 14px;
-			text-align: left;
-		}
-		button{
-			font-size: 14px;
-			padding: 7px 5px;
-			border-radius: 3px;
-			box-shadow: none;
-			background-color: rgba(255,255,255,0.85);
-			color: black;
-			text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-		}
-	}
-}
-
 
 #background{
 	background-image: url('../background.jpg');
@@ -99,4 +36,125 @@
 	background-repeat: no-repeat;
 	background-color: black;
 	
+}
+
+@media (max-width: 992px) {
+
+	.home-page {
+		#bottom-background{
+			display: inline-block;
+			position: relative;
+		}
+
+	}
+}
+
+.form-container{
+	padding: 0 $padding-md;
+	input, textarea{
+		padding: 7px;
+		border-radius: 3px;
+		width: 100%;
+		margin: 0;
+		margin-top: $padding-md;
+
+		/*getting rid of bootstrap shadow and glow*/
+		/*outline: none;*/
+		/*border: none !important;*/
+		border: 1px solid black;
+		-webkit-box-shadow: none !important;
+		-moz-box-shadow: none !important;
+		box-shadow: none !important;
+
+		&:last-child{
+			margin-bottom: $padding-md;
+		}
+	}
+	[type="submit"]{
+		background-color: green;
+		color: white;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+		border: none;
+	}
+}
+
+#top-background{
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 1px black;
+	margin-top: 120px;
+	h1{
+		font-size: 40px;
+	}
+	h2{
+		font-size: 30px;
+	}
+}
+
+.home-page {
+	#top-background{
+		
+		.form-container{
+			background-color: black;
+			border-color: 3px;
+			margin-top: 40px;
+		}
+	}
+
+	#bottom-background{
+		background-color: rgba(0,0,0,0.75);
+		text-align: center;
+		.option{
+			border-right: 1px solid white;
+			color: white;
+			text-shadow: 1px 1px 1px black;
+			padding: 20px;
+			&:last-child{
+				border-right: none;
+
+			}
+			h1{
+				margin: 10px 0;
+				font-size: 20px;
+			}
+			p{
+				color: rgba(255,255,255,0.85);
+				font-size: 14px;
+				text-align: left;
+			}
+			button{
+				font-size: 14px;
+				padding: 7px 5px;
+				border-radius: 3px;
+				box-shadow: none;
+				background-color: rgba(255,255,255,0.85);
+				color: black;
+				text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+			}
+		}
+	}
+
+}
+
+.secondaryForm-page{
+	.form-container{
+		margin-top: 5%;
+		background-color: #fafafa;
+		border-radius: 5px;
+	}
+}
+
+.confirmation-page{
+	a{
+		color: white;
+		text-decoration: none;
+
+	}
+}
+
+.admin-page{
+	.main-container{
+		padding: $padding-md;
+		background-color: white;
+	}	
 }

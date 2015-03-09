@@ -8,11 +8,17 @@
 </template>
 
 <template name="secondaryForm">
-	<form>
-		<input type="text" id="itinName" name="itinName">
-		<input type="email" id="itinEmail" name="itinEmail">
-		<textarea id="itinDescription" name="itinDescription"></textarea>
-		<input type="submit" value="Submit my Itinerary">
-	</form>
+	<div class="container">
+		<div class="row">
+			<div class="form-container col-md-4 col-md-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+				<form>
+					<input type="text" id="itinName" name="itinName" placeholder="Your First Name">
+					<input type="email" id="itinEmail" name="itinEmail" placeholder="Your Email">
+					<textarea rows="15" id="itinDescription" name="itinDescription" placeholder="Tell us why you are traveling, what you're looking to experience, and anything else you want us to know!"></textarea>
+					<input class="float-right width-auto" type="submit" value="Submit my Itinerary">
+				</form>
+			</div>
+		</div>
+	</div>
 </template>
 
