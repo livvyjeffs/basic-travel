@@ -7,6 +7,20 @@ Template.itineraries.helpers({
   }
 });
 
+Template.admin.helpers({
+  'isAdmin': function(){
+    var user = Meteor.users.findOne(Meteor.userId());
+    if(user){
+     if(user.emails[0].address==='jeffers.olivia@gmail.com'){
+       return true;
+     }else{
+      return false;
+    }
+  }
+  
+}
+});
+
 Template.mainForm.events({
   'submit form': function(event){
     event.preventDefault();

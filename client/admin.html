@@ -3,11 +3,13 @@
 	<div class="container main-container">
 		<div class="row"><h1>Admin Page</h1></div>
 		<div class="row"><h2>{{> loginButtons}}</h2></div>
+		{{#if isAdmin}}
 		<div class="row">
 			<div class="col-md-12">
 				{{> itineraries}}
 			</div>
 		</div>
+		{{/if}}
 
 	</div>
 
