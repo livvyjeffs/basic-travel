@@ -26,6 +26,7 @@
 				<th>Email</th>
 				<th>Description</th>
 				<th>Status</th>
+				<th>Delete</th>
 				<th>Created At</th>
 				<th>Updated At</th>
 			</tr>
@@ -39,7 +40,8 @@
 				<td>{{name}}</td>
 				<td>{{email}}</td>
 				<td>{{description}}</td>
-				<td>{{status}}</td>
+				<td><input type="checkbox" checked="{{checked}}" class="toggle-checked" /></td>
+				<td class="delete">delete</td>
 				<td>{{createdAt}}</td>
 				<td>{{updatedAt}}</td>
 			</tr>

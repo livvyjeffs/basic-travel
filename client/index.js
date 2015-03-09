@@ -17,9 +17,20 @@ Template.admin.helpers({
       return false;
     }
   }
-  
+
 }
 });
+
+Template.itineraries.events({
+ "click .toggle-checked": function () {
+      // Set the checked property to the opposite of its current value
+      console.log('clicked')
+      Meteor.call("setChecked", this._id, ! this.checked);
+    },
+    "click .delete": function () {
+      Meteor.call("deleteTask", this._id);
+    }
+  });
 
 Template.mainForm.events({
   'submit form': function(event){
