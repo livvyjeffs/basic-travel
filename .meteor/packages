@@ -10,3 +10,4 @@ accounts-ui
 iron:router
 twbs:bootstrap
 fourseven:scss
+rajit:bootstrap3-datepicker

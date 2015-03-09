@@ -64,3 +64,7 @@ Template.secondaryForm.events({
 
   }
 });
+
+Template.mainForm.rendered=function() {
+    $('#my-datepicker').datepicker();
+}
