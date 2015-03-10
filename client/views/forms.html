@@ -1,9 +1,29 @@
 <template name="mainForm">
-	<form>
-		<div class="col-md-3"><input type="text" id="my-datepicker" name="itinWhen" placeholder="When are you leaving?"></div>
-		<div class="col-md-3"><input type="text" id="itinDuration" name="itinDuration" placeholder="For how long?"></div>
-		<div class="col-md-3"><input type="text" id="itinBudget" name="itinBudget" placeholder="What's your budget?"></div>
-		<div class="col-md-3"><input type="submit" value="Take Me to Thailand"></div>	
+	<form class="form-inline">
+		<div class="sm-hidden col-md-3 col-sm-3">
+			<label for="itinWhen" class="sr-only">When</label>
+			<input type="text" id="my-main-datepicker" name="itinWhen" placeholder="When are you leaving?">
+		</div>
+		<div class="sm-hidden col-md-3 col-sm-3">
+			<label for="itinDuration" class="sr-only">Duration</label>
+			<input type="text" id="itinDuration" name="itinDuration" placeholder="For how long?">
+		</div>
+		<div class="sm-hidden col-md-3 col-sm-3">
+			<label for="itinBudget" class="sr-only">Budget</label>
+			<input type="text" id="itinBudget" name="itinBudget" placeholder="What's your budget?">
+		</div>
+		<div class="sm-hidden col-md-3 col-sm-3">
+			<button type="submit" class="btn btn-primary">Take Me to Thailand</button>
+		</div>
+		<div class="smallForm hidden sm-unveil-inline col-sm-12">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="When do you want to go?">
+				<span class="input-group-btn">
+					<button type="submit" class="btn btn-primary">Take Me to Thailand</button>
+				</span>
+			</div><!-- /input-group -->
+		</div>
+
 	</form>
 </template>
 
@@ -18,6 +38,67 @@
 					<input class="float-right width-auto" type="submit" value="Submit my Itinerary">
 				</form>
 			</div>
+		</div>
+	</div>
+</template>
+
+<template name="smallForm">
+	<div class="cover">
+		<div class="close"></div>
+		<div class="container">
+			<form>
+				<div class="row">
+					<div class="col-sm-12">
+						takemeto Thailand
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1">on</span>
+							<input type="text" class="form-control" id="my-small-datepicker" name="itinWhen" placeholder="what date are you leaving?" aria-describedby="basic-addon1">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon2">for</span>
+							<input type="text" class="form-control" name="itinDuration" placeholder="how long?" aria-describedby="basic-addon2">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon3">and for</span>
+							<input type="text" class="form-control" name="itinBudget" placeholder="what's your budget?" aria-describedby="basic-addon3">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-6">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon4">My name is </span>
+							<input type="text" class="form-control" name="itinName" placeholder="your first name" aria-describedby="basic-addon4">
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-6">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon5"> and you can reach me at </span>
+							<input type="text" class="form-control" name="itinEmail" placeholder="your email" aria-describedby="basic-addon5">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<textarea name="itinDescription" placeholder="additional info?"></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<button type="submit" class="btn btn-primary">Take Me to Thailand</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </template>

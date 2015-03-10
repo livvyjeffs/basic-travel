@@ -1,4 +1,8 @@
-$padding-md: 20px;
+$padding-md: 30px;
+
+body{
+	background-color: black;
+}
 
 .sticky{
 	position: absolute;
@@ -29,46 +33,86 @@ $padding-md: 20px;
 	width: auto !important;
 }
 
+.hidden{
+	display: none;
+}
+
 #background{
 	background-image: url('../background.jpg');
 	background-position: top;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-color: black;
-	
+}
+
+@media (min-width: 1200px) {
+
+	/* lg */
+
 }
 
 @media (max-width: 992px) {
+
+	/* md */
 
 	.home-page {
 		#bottom-background{
 			display: inline-block;
 			position: relative;
+			.option{
+				border-right: none;
+			}
 		}
-
 	}
+
+}
+@media (max-width: 768px){
+
+	/* sm */
+
+	.sm-unveil-inline{
+		display: inline-block !important;
+		visibility: visible !important;
+	}
+
+	.sm-hidden{
+		display: none;
+	}
+
+}
+@media (max-width: 480px) {
+
+	/* xs */	
+
+	.xs-unveil-inline{
+		display: inline-block !important;
+		visibility: visible !important;
+	}
+
+	.xs-hidden{
+		display: none;
+	}
+
 }
 
 .form-container{
-	padding: 0 $padding-md;
+	padding: $padding-md;
+	border-radius: 5px;
+	margin-bottom: 100px;
 	input, textarea{
 		color: black;
 		padding: 7px;
 		border-radius: 3px;
 		width: 100%;
 		margin: 0;
-		margin-top: $padding-md;
 
-		/*getting rid of bootstrap shadow and glow*/
-		/*outline: none;*/
-		/*border: none !important;*/
 		border: 1px solid black;
 		-webkit-box-shadow: none !important;
 		-moz-box-shadow: none !important;
 		box-shadow: none !important;
 
 		&:last-child{
-			margin-bottom: $padding-md;
+			/*margin-bottom: $padding-md;*/
 		}
 	}
 	[type="submit"]{
@@ -167,5 +211,21 @@ $padding-md: 20px;
 	th {
 		background-color: green;
 		color: white;
+	}
+}
+
+.cover{
+	display: none;
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	background-color: #fafafa;
+	z-index: 10000;
+	.close{
+		width: 20px;
+		height: 20px;
+		background-color: gray;
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 }
