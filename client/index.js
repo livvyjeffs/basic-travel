@@ -42,7 +42,6 @@ Template.mainForm.events({
   },
   'click .smallForm': function(event){
     event.preventDefault();
-    alert('smallForm')
     $('.cover').show();
     $('.mainForm').hide();
   }
@@ -50,7 +49,6 @@ Template.mainForm.events({
 
 Template.smallForm.events({
   'click .close': function(event){
-    alert('close')
     $('.cover').hide();
     $('.mainForm').show();
   }
