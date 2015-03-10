@@ -45,55 +45,7 @@ body{
 	background-color: black;
 }
 
-@media (min-width: 1200px) {
 
-	/* lg */
-
-}
-
-@media (max-width: 992px) {
-
-	/* md */
-
-	.home-page {
-		#bottom-background{
-			display: inline-block;
-			position: relative;
-			.option{
-				border-right: none;
-			}
-		}
-	}
-
-}
-@media (max-width: 768px){
-
-	/* sm */
-
-	.sm-unveil-inline{
-		display: inline-block !important;
-		visibility: visible !important;
-	}
-
-	.sm-hidden{
-		display: none;
-	}
-
-}
-@media (max-width: 480px) {
-
-	/* xs */	
-
-	.xs-unveil-inline{
-		display: inline-block !important;
-		visibility: visible !important;
-	}
-
-	.xs-hidden{
-		display: none;
-	}
-
-}
 
 .form-container{
 	padding: $padding-md;
@@ -228,4 +180,58 @@ body{
 		top: 0;
 		right: 0;
 	}
+}
+
+@media (min-width: 1200px) {
+
+	/* lg */
+
+}
+
+@media (max-width: 992px) {
+
+	/* md */
+
+	.home-page {
+		#bottom-background{
+			display: inline-block;
+			position: relative;
+			.option{
+				border-right: none;
+			}
+		}
+	}
+
+}
+@media (max-width: 768px){
+
+	/* sm */
+
+	.sm-unveil-inline{
+		display: inline-block !important;
+		visibility: visible !important;
+	}
+
+	.sm-hidden{
+		display: none;
+	}
+
+	.mainForm{
+		background-color: none;
+	}
+
+}
+@media (max-width: 480px) {
+
+	/* xs */	
+
+	.xs-unveil-inline{
+		display: inline-block !important;
+		visibility: visible !important;
+	}
+
+	.xs-hidden{
+		display: none;
+	}
+
 }
