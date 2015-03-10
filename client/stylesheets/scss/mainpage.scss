@@ -174,8 +174,10 @@ body{
 	top: 0; bottom: 0; left: 0; right: 0;
 	background-color: #fafafa;
 	z-index: 10000;
+	padding-top: 50px;
 	.close{
-		padding: 50px;
+		padding: 15px;
+		border: 1px solid black;
 		background-color: gray;
 		position: absolute;
 		top: 0;
