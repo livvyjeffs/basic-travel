@@ -45,12 +45,14 @@ body{
 	background-color: black;
 }
 
-
+.mainForm{
+	margin-bottom: 100px;
+}
 
 .form-container{
 	padding: $padding-md;
 	border-radius: 5px;
-	margin-bottom: 100px;
+
 	input, textarea{
 		color: black;
 		padding: 7px;
@@ -216,15 +218,25 @@ body{
 		display: none;
 	}
 
-	.mainForm{
-		background-color: none;
-	}
-
 }
+
 @media (max-width: 480px) {
 
-	/* xs */	
+	/* xs */
 
+	#top-background{
+		margin-top: 20px;
+		h1{
+			font-size: 30px;
+		}
+		h2{
+			font-size: 20px;
+		}
+	}	
+
+	.mainForm{
+		margin-bottom: 20px;
+	}
 	.xs-unveil-inline{
 		display: inline-block !important;
 		visibility: visible !important;
